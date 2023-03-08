@@ -17,7 +17,7 @@ kafka-consumer-config:
   specific-avro-reader-key: specific.avro.reader
   specific-avro-reader: true
   batch-listener: true #questa property permette di leggere i dati a batches
-  auto-startup: true #mettendo a false significa che si vuole iniziare  a leggere dai topic solo dopo aver controllato che siano già attivi
+  auto-startup: false #mettendo a false significa che si vuole iniziare  a leggere dai topic solo dopo aver controllato che siano già attivi
   concurrency-level: 3 #generalmente si setta come il numero di partitions per ottimizzare la concorrenza e quindi il throughput
   session-timeout-ms: 10000 #è il timeout oltre il quale il broker considera morto il consumer se non riceve heartbeat signals
   heartbeat-interval-ms: 3000 #ogni quanto il consumer manda heartbeat al broker: generalmente si mette 1/3 della property di sopra
